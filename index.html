@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chapter 02 Practice</title>
+        <style>
+            #beachImg{
+                display: flex;   
+                flex-wrap: wrap;            
+            }
+            img{
+                width: 400px;
+                height: 300px;
+                border-radius: 20px;
+                margin: 10px;
+             }
+            #beachImg :hover{
+                width: 450px;
+                border: 3px solid blueviolet; 
+                box-shadow: 5px;
+               
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>The <span id="spanTotalBeach">X</span> Best Island Beaches in the World</h1>
+        <ol>
+            <li id="liBeach1"></li>
+            <li id="liBeach2"></li>
+            <li id="liBeach3"></li>
+            <li id="liBeach4"></li>
+            <li id="liBeach5"></li>
+            <li id="liBeach6"></li>
+        </ol>
+        <div id="divMessage"></div>
+        <div id="beachImg">
+            <img id="beach1" src="img/1.jpg" />
+            <img id="beach2" src="img/2.jpg" />
+            <img id="beach3" src="img/3.jpg" />
+            <img id="beach4" src="img/4.jpg" />
+            <img id="beach5" src="img/5.jpg" />
+            <img id="beach6" src="img/6.jpg" />
+        </div>
+        
+        <script>
+            "use strict";
+            //create element objects
+
+            var elBeach1 = document.getElementById("liBeach1"),
+            elBeach2=document.getElementById("liBeach2"),
+            elBeach3=document.getElementById("liBeach3"),
+            elBeach4=document.getElementById("liBeach4"),
+            elBeach5=document.getElementById("liBeach5"),
+            elBeach6=document.getElementById("liBeach6");
+
+            
+            var elDivMessage=document.getElementById("divMessage"),
+            elSpanTotalBeach=document.getElementById("spanTotalBeach");
+
+            var beachName=[
+                "Blue Beach (La Chiva), Vieques, Puerto Rico",
+                "Seagrass Bay, Laucala Island, Fiji",
+                "Bathsheba Beach, Barbados",
+                "Sunset Beach, Oahu, Hawaii",
+                "Banana Beach, Koh Hey (Coral) Island, Phuket, Thailand",
+                "Siasconset Beach, Nantucket, MA",
+            ],
+
+            //create variables for price and total
+            beachTourPrice=[5000.05,4500.45,4200.42,3500.35,3200.32,3000.50],
+            beachAllTourPrice=beachTourPrice[0]+beachTourPrice[1]+beachTourPrice[2]+beachTourPrice[3]+beachTourPrice[4]+beachTourPrice[5];
+
+            //testing variable
+            console.log(beachName);
+            console.log(beachTourPrice[0]);
+            console.log(beachAllTourPrice);
+
+            //show list element by js function 'textContent'
+            elBeach1.textContent=beachName[0]+" - $"+beachTourPrice[0];
+            elBeach2.textContent=beachName[1]+" - $"+beachTourPrice[1];
+            elBeach3.textContent=beachName[2]+" - $"+beachTourPrice[2];
+            elBeach4.textContent=beachName[3]+" - $"+beachTourPrice[3];
+            elBeach5.textContent=beachName[4]+" - $"+beachTourPrice[4];
+            elBeach6.textContent=beachName[5]+" - $"+beachTourPrice[5];
+
+           
+            //show total tour amout
+            elDivMessage.textContent="The total amount to tour these all beaches is $"+beachAllTourPrice.toFixed(2);
+            elSpanTotalBeach.textContent=beachName.length;
+
+
+
+        </script>
+
+    </body>
+</html>
