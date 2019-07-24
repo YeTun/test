@@ -1,0 +1,6 @@
+// Click button
+document.getElementsByTagName("button");
+
+document.getElementsByTagName("button")[0];
+
+
